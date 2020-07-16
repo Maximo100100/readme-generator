@@ -1,9 +1,10 @@
+// use require to link other scripts in node.js
 const fs = require('fs');
 const inquirer = require('inquirer');
 const Choices = require('inquirer/lib/objects/choices');
 const generatePage = require('./utils/generateMarkdown.js');
 
-
+// Function that takes user inputs using "Inquirer"
 const promptUser = data => {
     console.log(`
 ==========================================================
@@ -11,6 +12,7 @@ Answer the questions to generate your professional readme.
 ==========================================================
 `);
     return inquirer.prompt([
+// Question array
       {
         type: 'input',
         name: 'title',
@@ -78,10 +80,12 @@ Answer the questions to generate your professional readme.
     ])
   };
 
+// Evoke promptUser
 promptUser()
+// The promise logs the all done message and writes the file with data from generateMarkdown.js
     .then(readmeData => {
-      console.log(readmeData);
-      fs.writeFile('./Readme.md', generatePage(readmeData), err => {
+      console.log('All done! Find your readme in the produced_readme folder.');
+      fs.writeFile('./produced_readme/Readme.md', generatePage(readmeData), err => {
         if (err) throw new Error(err);
       })
     });

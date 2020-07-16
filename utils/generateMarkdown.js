@@ -1,7 +1,9 @@
 // function to generate markdown for README
 function generateMarkdown(readmeData) {
+
+// template for readme data added from readmeData object
 return `
-# [${readmeData.title}](${readmeData.live})  https://img.shields.io/badge/License-${readmeData.license}-Blue
+# [${readmeData.title}](${readmeData.live})  ![License](https://img.shields.io/badge/License-${readmeData.license}-Blue)
 
 ## Description 
 
@@ -9,12 +11,12 @@ ${readmeData.description}
 
 ## Table of Contents
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [License](#license)
-* [Questions](#questions)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
 
 ## Installation
 
@@ -46,6 +48,7 @@ ${readmeData.question}
 * Github: www.github.com/${readmeData.github}
 
 `;
-}
+};
 
+// Export the function
 module.exports = generateMarkdown;
