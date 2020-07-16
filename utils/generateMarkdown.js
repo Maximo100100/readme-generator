@@ -1,22 +1,48 @@
 // function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+function generateMarkdown(readmeData) {
+
+  return `
+# [${readmeData.title}](${readmeData.live})
+
+## Description 
+
+${readmeData.description}
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [License](#license)
+* [Questions](#questions)
+
+## Installation
+
+${readmeData.installation}
+
+## Usage 
+
+${readmeData.usage}
+
+## Contributing
+
+${readmeData.contribution}
+
+## Tests
+
+${readmeData.tests}
+
+## License
+
+${readmeData.license}
+
+## Questions
+
+* Email: ${readmeData.email}
+* Github: www.github.com/${readmeData.github}
 
 `;
 }
-
-// this is important for later
-const generateAbout = aboutText => {
-  if (!aboutText) {
-    return '';
-  }
-
-  return `
-    <section class="my-3" id="about">
-      <h2 class="text-dark bg-primary p-2 display-inline-block">About Me</h2>
-      <p>${aboutText}</p>
-    </section>
-  `;
-};
 
 module.exports = generateMarkdown;
