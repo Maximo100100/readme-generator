@@ -1,9 +1,9 @@
 
-# [yourmom](www.google.com)
+# [Readme Generator](Here)  https://img.shields.io/badge/License-MIT-Blue
 
 ## Description 
 
-asds
+Its a node.js program that produces a professional readme for your project
 
 ## Table of Contents
 
@@ -16,25 +16,29 @@ asds
 
 ## Installation
 
-adssadasd
+To install clone the repo and use npm install
 
 ## Usage 
 
-asdasdasdasd
+to use simply use
 
 ## Contributing
 
-asasdsadasd
+contribute as you will
 
 ## Tests
 
-asddsad
+test this program by running node index.js
 
 ## License
 
-Unlicensed
+MIT 
+
+To learn more about this license visit https://choosealicense.com/licenses/
 
 ## Questions
+
+Email me i guess
 
 * Email: Maximoabahamondes@gmail.com
 * Github: www.github.com/Maximo100100

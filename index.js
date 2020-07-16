@@ -69,7 +69,12 @@ Answer the questions to generate your professional readme.
         type: 'input',
         name: 'live',
         message: 'Provide a live link for your project:',
-      }
+      },
+      {
+        type: 'input',
+        name: 'question',
+        message: 'Give additional information for how people can reach you:',
+      },
     ])
   };
 
